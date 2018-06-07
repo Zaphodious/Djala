@@ -1,7 +1,0 @@
--main TestMain
--cp src/
--cp test/
--neko bin/test/Djala.n
--lib munit
--lib mockatoo
-

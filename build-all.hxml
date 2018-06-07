@@ -1,0 +1,26 @@
+-cp src
+-main com.blakwurm.djala.Main
+--each
+
+-neko bin/prod/djala.n
+--next
+-js bin/prod/djala.js
+--next
+-cpp bin/prod/cpp
+--next
+
+### Test Build
+
+-cp src
+-cp test
+-lib munit
+-lib mockatoo
+-main TestMain
+
+--each
+
+-neko bin/test/test.n
+--next
+-js bin/test/test.js
+--next
+-cpp bin/test/cpp

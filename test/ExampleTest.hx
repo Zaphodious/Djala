@@ -43,7 +43,7 @@ class ExampleTest
 
 	@Test
 	public function anotherTest() : Void {
-		Assert.isTrue(false)
+		Assert.isTrue(true);
 	}
 
 	@AsyncTest

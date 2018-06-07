@@ -1,6 +1,0 @@
--main com.blakwurm.djala.Main
--cp src/
--cpp bin/cpp/Djala
--lib hxcpp
-#-lib munit
-#-lib mockatoo
