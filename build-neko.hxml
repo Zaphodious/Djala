@@ -1,0 +1,3 @@
+-main com.blakwurm.djala.Main
+-cp src/
+-neko bin/neko/Djala.n

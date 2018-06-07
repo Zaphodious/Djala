@@ -1,0 +1,6 @@
+-cmd haxe build-munit-neko.hxml
+--next
+-cmd haxe build-munit-js.hxml
+--next
+-cmd neko bin/test/Djala.n
+-v

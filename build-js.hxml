@@ -1,0 +1,5 @@
+-main com.blakwurm.djala.Main
+-cp src/
+-js bin/js/Djala.js
+-lib munit
+-lib mockatoo

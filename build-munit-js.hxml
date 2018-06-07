@@ -1,0 +1,7 @@
+-main TestMain
+-cp src/
+-cp test/
+-js bin/test/Djala.js
+-lib munit
+-lib mockatoo
+
