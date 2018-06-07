@@ -1,10 +1,10 @@
 {
   "name": "Djala",
-  "url" : "https://github.com/YOUR_NAME/Djala/",
+  "url" : "https://github.com/Zaphodious/Djala/",
   "license": "MIT",
   "tags": ["haxe","neko","js","cpp","munit"],
   "description": "description of Djala",
-  "version": "0.1",
+  "version": "0.0.1",
   "releasenote": "Initial release",
-  "contributors": ["YOUR_NAME"]
+  "contributors": ["Zaphodious"]
 }
