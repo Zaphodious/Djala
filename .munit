@@ -1,0 +1,8 @@
+version=2.2.3
+src=test
+bin=bin
+report=report
+hxml=test.hxml
+classPaths=src
+resources=resources
+templates=templates

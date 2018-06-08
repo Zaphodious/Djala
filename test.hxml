@@ -1,0 +1,12 @@
+-cp src
+-cp test
+-lib munit
+-lib mockatoo
+-lib dataclass
+-main TestMain
+
+--each
+
+-neko bin/test/test.n
+--next
+-js bin/test/test.js
