@@ -3,6 +3,9 @@
 -lib munit
 -lib mockatoo
 -lib dataclass
+-lib monsoon
+-lib haxelow
+-lib tink_cli
 -main TestMain
 
 --each

@@ -1,9 +1,25 @@
 -cp src
--main com.blakwurm.djala.Main
+-main com.blakwurm.djala.Djala
+-lib monsoon-embed
+-lib dataclass
+-lib haxelow
+-lib tink_cli
 --each
 
+-lib monsoon-embed
 -neko bin/prod/djala.n
 --next
+-lib monsoon-embed
+-cpp bin/prod/cpp
+--next
+
+-cp src
+-main com.blakwurm.djala.Main
+-lib monsoon
+-lib dataclass
+-lib haxelow
+-lib tink_cli
+--each
+
 -js bin/prod/djala.js
 --next
--cpp bin/prod/cpp
