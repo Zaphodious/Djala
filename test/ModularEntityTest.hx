@@ -3,13 +3,15 @@ package ;
 import massive.munit.util.Timer;
 import massive.munit.Assert;
 import massive.munit.async.AsyncFactory;
-import com.blakwurm.djala.Character;
+import com.blakwurm.ModularEntity;
+import DataClass;
 
 
-class PlayerTest 
+class ModularEntityTest 
 {
 	
-	
+	var testEntity : ModularEntity;
+
 	public function new() 
 	{
 		
@@ -28,6 +30,7 @@ class PlayerTest
 	@Before
 	public function setup()
 	{
+		testEntity = new ModularEntity({name: "TestEntity", id: "123456789"});
 	}
 	
 	@After
@@ -38,13 +41,12 @@ class PlayerTest
 	@Test
 	public function testExample()
 	{
-		Assert.isTrue(true);
+		var testA = new TestA({name: "Fern"});
+		testEntity.set(TestA, testA);
+		Assert.areEqual(testA, testEntity.get(TestA));
 	}
+}
 
-	@Test
-	public function testA() {
-		/* var thing = new Character({name: "Herbert"});
-		trace(thing);
-		Assert.isNotNull(thing); */
-	}
+class TestA implements DataClass {
+	public var name: String;
 }

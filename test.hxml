@@ -6,6 +6,7 @@
 -lib monsoon
 -lib haxelow
 -lib tink_cli
+-lib haxe-strings
 -main TestMain
 
 --each

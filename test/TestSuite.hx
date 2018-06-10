@@ -2,6 +2,7 @@ import massive.munit.TestSuite;
 
 import ExampleTest;
 import FooTest;
+import ModularEntityTest;
 import PlayerTest;
 
 /**
@@ -16,6 +17,7 @@ class TestSuite extends massive.munit.TestSuite
 
 		add(ExampleTest);
 		add(FooTest);
+		add(ModularEntityTest);
 		add(PlayerTest);
 	}
 }

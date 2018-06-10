@@ -4,6 +4,7 @@
 -lib dataclass
 -lib haxelow
 -lib tink_cli
+-lib haxe-strings
 --each
 
 -lib monsoon-embed
@@ -19,6 +20,7 @@
 -lib dataclass
 -lib haxelow
 -lib tink_cli
+-lib haxe-strings
 --each
 
 -js bin/prod/djala.js

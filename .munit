@@ -6,3 +6,4 @@ hxml=test.hxml
 classPaths=src
 resources=resources
 templates=templates
+coveragePackages=ModularTest

@@ -2,7 +2,6 @@ package com.blakwurm.djala;
 
 import DataClass;
 import HaxeLow;
-import haxe.ds.HashMap;
 
 class Character implements DataClass{
     public var id: String = HaxeLow.uuid();
@@ -18,25 +17,7 @@ class Character implements DataClass{
     public var health: HealthTrack = new HealthTrack({});
 }
 
-/* typedef TypeBearer = {typename: String};
-
-class Modular {
-    private var modules: HashMap<ModuleKey<Dynamic>, Dynamic>;
-
-    public function get<T: TypeBearer>(key: ModuleKey<T>) : T {
-        return cast modules.get(key);
-    }
-}
-
-class ModuleKey <T: TypeBearer> {
-    public var classType: String;
-    function new(classtype: T) {
-        classType = classtype.typename;
-    }
-    public function hashCode() : Int {
-        return classType.hashCode();
-    }
-} */
+/*  */
 
 
 private class ARuleRef {

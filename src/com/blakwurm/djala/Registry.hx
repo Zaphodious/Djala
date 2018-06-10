@@ -2,7 +2,6 @@ package com.blakwurm.djala;
 
 import com.blakwurm.djala.Character;
 import com.blakwurm.djala.Rulebook;
-import DataClass;
 import HaxeLow;
 
 
