@@ -77,6 +77,8 @@ class ModularEntityTest
 
 		Assert.areEqual(testA1, testA2);
 		Assert.areEqual(testB1, testB2);
+
+		trace(testEntity.toJson());
 	}
 
 	@Test
@@ -93,18 +95,29 @@ class ModularEntityTest
 		testEntity.remove(TestA);
 		Assert.isNull(testEntity.get(TestA));
 	}
+
+	@Test
+	public function copies() {
+		var testA1 = new TestA({name: "thingA"});
+
+		testEntity.set(TestA, testA1); 
+
+		var anotherTestEntity = testEntity.copy();
+
+		Assert.areNotEqual(testEntity, anotherTestEntity);
+	}
 }
 
-class TestA implements DataClass {
+class TestA implements IModule {
 	public var name: String;
 }
 
-class TestB implements DataClass {
+class TestB implements IModule {
 	public var tess: Int;
 	public var name: String;
 	public var krak: Bool;
 }
 
-class TestNeverUsed implements DataClass {
+class TestNeverUsed implements IModule {
 	public var name: String;
 }
