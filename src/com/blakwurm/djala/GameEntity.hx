@@ -4,7 +4,7 @@ import com.blakwurm.ModularEntity;
 
 class GameEntity {
     public static function initCharacter() : ModularEntity {
-        val character = new ModularEntity({name: "Unnamed"});
+        var character = new ModularEntity({name: "Unnamed"});
         character.set(HealthTrack, new HealthTrack());
         return character;
     }
