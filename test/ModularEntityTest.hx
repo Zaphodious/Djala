@@ -14,35 +14,24 @@ class ModularEntityTest
 	
 	var testEntity : ModularEntity;
 
-	public function new() 
-	{
-		
-	}
+	public function new() {}
 	
 	@BeforeClass
-	public function beforeClass()
-	{
-	}
+	public function beforeClass() {}
 	
 	@AfterClass
-	public function afterClass()
-	{
-	}
+	public function afterClass() {}
 	
 	@Before
-	public function setup()
-	{
+	public function setup() {
 		testEntity = new ModularEntity({name: "TestEntity"});
 	}
 	
 	@After
-	public function tearDown()
-	{
-	}
+	public function tearDown() {}
 	
 	@Test
-	public function putsAndGets()
-	{
+	public function putsAndGets() {
 		var testA = new TestA({name: "Fern"});
 		testEntity.set(TestA, testA);
 		Assert.areEqual(testA, testEntity.get(TestA));
