@@ -1,9 +1,6 @@
 import massive.munit.TestSuite;
 
-import ExampleTest;
-import FooTest;
 import ModularEntityTest;
-import PlayerTest;
 
 /**
  * Auto generated Test Suite for MassiveUnit.
@@ -15,9 +12,6 @@ class TestSuite extends massive.munit.TestSuite
 	{
 		super();
 
-		add(ExampleTest);
-		add(FooTest);
 		add(ModularEntityTest);
-		add(PlayerTest);
 	}
 }

@@ -1,10 +1,6 @@
 package ;
 
-import massive.munit.util.Timer;
 import massive.munit.Assert;
-import massive.munit.async.AsyncFactory;
-import DataClass;
-import Sys;
 
 using haxe.Json;
 
@@ -36,7 +32,7 @@ class ModularEntityTest
 	@Before
 	public function setup()
 	{
-		testEntity = new ModularEntity({name: "TestEntity", id: "123456789"});
+		testEntity = new ModularEntity({name: "TestEntity"});
 	}
 	
 	@After
@@ -137,16 +133,16 @@ class ModularEntityTest
 	}
 }
 
-class TestA implements IModule {
+class TestA implements Module {
 	public var name: String;
 }
 
-class TestB implements IModule {
+class TestB implements Module {
 	public var tess: Int;
 	public var name: String;
 	public var krak: Bool;
 }
 
-class TestNeverUsed implements IModule {
+class TestNeverUsed implements Module {
 	public var name: String;
 }

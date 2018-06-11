@@ -1,50 +1,30 @@
 package com.blakwurm.djala;
 
-import com.blakwurm.djala.Character;
-import com.blakwurm.djala.Rulebook;
+import com.blakwurm.ModularEntity;
 import HaxeLow;
 
 
 interface Registry {
-    public var characters : TypeRegistry<Character>;
-    public var rulebooks : TypeRegistry<Rulebook>;
+    public var entities: Array<ModularEntity>;
+    public function find(id: String) : ModularEntity;
+    public function insert(thing: ModularEntity) : Bool;
+    public function delete(id: String) : Bool;
 }
 
 class AbstractRegistry implements Registry {
-    public var characters : TypeRegistry<Character> = new GenericTypeRegistry();
-    public var rulebooks : TypeRegistry<Rulebook> = new GenericTypeRegistry();
+    public var entities: Array<ModularEntity> = new Array();
+    public function find(id: String) : T {return entities[0];}
+    public function insert(thing: T) : Bool {return true;}
+    public function delete(id: String) : Bool {return true;}
 }
 
 class LocalRegistry extends AbstractRegistry {
     var db: HaxeLow;
-
-    var lowCharacters: HaxeLowCol<Character, String>;
-    var lowRulebooks: HaxeLowCol<Rulebook, String>;
+    var lowEntities: Array<ModularEntity> = new Array();
 
     public function new(dbname: String) {
         db = new HaxeLow(dbname);
-        lowCharacters = db.idCol(Character);
-        lowRulebooks = db.idCol(Rulebook);
-        characters.col = lowCharacters;
-        rulebooks.col = lowRulebooks;
+        lowEntities = db.idCol(ModularEntity);
+        this.entities = lowEntities;
     }
-
-    public function getCharacter(name: String) : Character {
-        return new Character({name: "Hello"});
-    }
-}
-
-interface TypeRegistry <T> {
-    public var col: Array<T>;
-    public function find(id: String) : T;
-    public function insert(thing: T) : Bool;
-    public function delete(id: String) : Bool;
-}
-
-class GenericTypeRegistry <T> implements TypeRegistry<T> {
-    public function new() {}
-    public var col: Array<T>;
-    public function find(id: String) : T {return col[0];}
-    public function insert(thing: T) : Bool {return true;}
-    public function delete(id: String) : Bool {return true;}
 }

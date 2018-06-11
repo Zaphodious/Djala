@@ -1,7 +1,6 @@
 package com.blakwurm;
 
 using haxe.Json;
-using hx.strings.Strings;
 using Type;
 using dataclass.JsonConverter;
 

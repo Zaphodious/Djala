@@ -1,33 +1,28 @@
 package com.blakwurm;
 
-import haxe.ds.HashMap;
-import haxe.ds.Option;
 import DataClass;
+import HaxeLow;
 
-using hx.strings.Strings;
 using Type;
 using dataclass.JsonConverter;
 
 class ModularEntity implements DataClass {
 
     public var name: String;
-    public var id: String;
+    public var id: String = HaxeLow.uuid();
 
-    //@include 
-    public var modules: Map<String, IModule> = new Map();
+    public var modules: Map<String, Module> = new Map();
 
     public function get<T: DataClass>(c: Class<T>) : Null<T> {
-        var foo = c.getClassName();
         return cast modules[c.getClassName()];
     }
 
-    public function set<T: IModule>(c: Class<T>, thing: T) : ModularEntity {
-        var foo = c.getClassName();
+    public function set<T: Module>(c: Class<T>, thing: T) : ModularEntity {
         modules.set(c.getClassName(), thing);
         return this;
     }
 
-    public function remove<T: IModule>(c: Class<T>) : ModularEntity {
+    public function remove<T: Module>(c: Class<T>) : ModularEntity {
         modules.remove(c.getClassName());
         return this;
     }
@@ -39,5 +34,5 @@ class ModularEntity implements DataClass {
     
 }
 
-interface IModule extends DataClass {
+interface Module extends DataClass {
 }
