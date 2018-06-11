@@ -8,22 +8,32 @@ using dataclass.JsonConverter;
 
 class ModularEntity implements DataClass {
 
+    /**
+     *  Human-readable entity name. Not used as a unique identifier.
+     */
     public var name: String;
+
+    /**
+     *  Unique string, used to identify the entity.
+     */
     public var id: String = HaxeLow.uuid();
 
-    public var modules: Map<String, Module> = new Map();
+    /**
+     *  Exposed publically for the benefit of serialiation. This SHOULD NOT be accessed on its own.
+     */
+    public var __modules: Map<String, Module> = new Map();
 
     public function get<T: Module>(c: Class<T>) : Null<T> {
-        return cast modules[c.getClassName()];
+        return cast __modules[c.getClassName()];
     }
 
     public function set<T: Module>(c: Class<T>, thing: T) : ModularEntity {
-        modules.set(c.getClassName(), thing);
+        __modules.set(c.getClassName(), thing);
         return this;
     }
 
     public function remove<T: Module>(c: Class<T>) : ModularEntity {
-        modules.remove(c.getClassName());
+        __modules.remove(c.getClassName());
         return this;
     }
 

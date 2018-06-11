@@ -11,6 +11,8 @@
 
 --each
 
+-cpp bin/test/cpp
+--next
 -neko bin/test/test.n
 --next
 -js bin/test/test.js
