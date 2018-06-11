@@ -1,5 +1,6 @@
 import massive.munit.TestSuite;
 
+import GameEntityTest;
 import ModularEntityTest;
 
 /**
@@ -12,6 +13,7 @@ class TestSuite extends massive.munit.TestSuite
 	{
 		super();
 
+		add(GameEntityTest);
 		add(ModularEntityTest);
 	}
 }

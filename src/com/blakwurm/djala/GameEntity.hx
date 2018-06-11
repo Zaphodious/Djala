@@ -5,8 +5,15 @@ import com.blakwurm.ModularEntity;
 class GameEntity {
     public static function initCharacter() : ModularEntity {
         var character = new ModularEntity({name: "Unnamed"});
-        character.set(HealthTrack, new HealthTrack());
+        character
+                .set(HealthTrack, new HealthTrack())
+                .set(CharacterModule, new CharacterModule());
         return character;
+    }
+
+    public static function initRulebook() : ModularEntity {
+        var rulebook = new ModularEntity({name: "Unnamed"});
+        return rulebook;
     }
 }
 
@@ -23,12 +30,12 @@ private class HealthTrack implements Module {
 public class CharacterModule implements Module {
     public var player: String = "Zaphodious";
     public var type: String = "Solar";
-    public var subtype: String = "Zenith";
     public var rulebooks: Array<String> = ["core"];
     public var image: String = "";
 }
 
 public class SolarModule implements Module {
+    public var caste: String;
     public var supernal: String;
     public var favored: Array<String>;
 }
