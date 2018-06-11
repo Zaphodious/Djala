@@ -4,9 +4,13 @@ import massive.munit.util.Timer;
 import massive.munit.Assert;
 import massive.munit.async.AsyncFactory;
 import DataClass;
+import Sys;
+
+using haxe.Json;
 
 using com.blakwurm.ModularEntity;
 using dataclass.JsonConverter;
+using com.blakwurm.DataClassExt;
 
 
 class ModularEntityTest 
@@ -78,7 +82,6 @@ class ModularEntityTest
 		Assert.areEqual(testA1, testA2);
 		Assert.areEqual(testB1, testB2);
 
-		trace(testEntity.toJson());
 	}
 
 	@Test
@@ -96,15 +99,41 @@ class ModularEntityTest
 		Assert.isNull(testEntity.get(TestA));
 	}
 
-	@Test
+	/* @Test
 	public function copies() {
 		var testA1 = new TestA({name: "thingA"});
 
-		testEntity.set(TestA, testA1); 
+		trace("test a1 " + testA1);
+		testEntity.set(TestA, testA1);
 
+		trace("TestEntity is " + testEntity);
 		var anotherTestEntity = testEntity.copy();
 
+		trace("New Test Entity is " + anotherTestEntity);
 		Assert.areNotEqual(testEntity, anotherTestEntity);
+	} */
+
+	@Test
+	public function roundTripsWithJson() {
+		var newJson = testEntity.toJson().stringify();
+
+		trace(newJson);
+
+		var newEntity = ModularEntity.fromJson(newJson.parse());
+
+		Assert.areNotEqual(testEntity, newEntity);
+	}
+
+	@Test
+	public function copiesCleanly() {
+		var newEntity = testEntity.copy();
+		Assert.areNotEqual(testEntity, newEntity);
+		Assert.areEqual(newEntity.name, testEntity.name);
+
+		var testA = new TestA({name: "Farfo"});
+		testEntity.set(TestA, testA);
+		Assert.areEqual(testEntity.get(TestA), testA);
+		Assert.isNull(newEntity.get(TestA));
 	}
 }
 

@@ -33,14 +33,11 @@ class ModularEntity implements DataClass {
     }
 
     public function toString() : String {
-        return cast( this.toJson());
+        return cast( this.toJson() );
     }
 
-    public static function copy<T: DataClass>(dataClass: T) : T {
-        return Type.getClass(dataClass).fromJson(dataClass.toJson());
-    }
+    
 }
 
 interface IModule extends DataClass {
-
 }
