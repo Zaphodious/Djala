@@ -2,6 +2,7 @@ import massive.munit.TestSuite;
 
 import GameEntityTest;
 import ModularEntityTest;
+import SystemTest;
 
 /**
  * Auto generated Test Suite for MassiveUnit.
@@ -15,5 +16,6 @@ class TestSuite extends massive.munit.TestSuite
 
 		add(GameEntityTest);
 		add(ModularEntityTest);
+		add(SystemTest);
 	}
 }

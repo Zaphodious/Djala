@@ -4,7 +4,7 @@ import com.blakwurm.ModularEntity;
 import HaxeLow;
 
 
-interface Registry {
+interface Registry extends DataClass {
     public var entities: Array<ModularEntity>;
     public function find(id: String) : ModularEntity;
     public function insert(thing: ModularEntity) : Bool;

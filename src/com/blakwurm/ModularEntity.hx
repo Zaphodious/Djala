@@ -45,4 +45,11 @@ class ModularEntity implements DataClass {
 }
 
 interface Module extends DataClass {
+    public function preAdd(entity: ModularEntity) : Bool
+}
+
+class AbstractModule implements Module {
+    public function preAdd(entity: ModularEntity) : Bool {
+        return true
+    }
 }
