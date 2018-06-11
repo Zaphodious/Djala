@@ -20,7 +20,7 @@ private class HealthTrack implements Module {
     public var aggrevated: Int = 0;
 }
 
-public class CharacterCore implements Module {
+public class CharacterModule implements Module {
     public var player: String = "Zaphodious";
     public var type: String = "Solar";
     public var subtype: String = "Zenith";
@@ -28,13 +28,22 @@ public class CharacterCore implements Module {
     public var image: String = "";
 }
 
-public class StatCore implements Module {
+public class SolarModule implements Module {
+    public var supernal: String;
+    public var favored: Array<String>;
+}
+
+public class StatModule implements Module {
     public var attributes: Map<String, Int> = new Map<String, Int>();
     public var abilities: Map<String, Int> = new Map<String, Int>();
 }
 
-public class CasterCore implements Module {
+public class CasterModule implements Module {
     public var castables: Array<CastableRef> = [];
+}
+
+public class MeritModule implements Module {
+    public var merits: Array<MeritRef> = [];
 }
 
 private class ARuleRef {
