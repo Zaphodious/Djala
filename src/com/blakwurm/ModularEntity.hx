@@ -13,7 +13,7 @@ class ModularEntity implements DataClass {
 
     public var modules: Map<String, Module> = new Map();
 
-    public function get<T: DataClass>(c: Class<T>) : Null<T> {
+    public function get<T: Module>(c: Class<T>) : Null<T> {
         return cast modules[c.getClassName()];
     }
 
