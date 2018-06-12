@@ -12,7 +12,7 @@ using com.blakwurm.DataClassExt;
 class ModularEntityTest 
 {
 	
-	var testEntity : ModularEntity;
+	var testEntity : ModularEntity<Module>;
 
 	public function new() {}
 	
@@ -124,6 +124,7 @@ class ModularEntityTest
 
 class TestA implements Module {
 	public var name: String;
+	public function foo() return true;
 }
 
 class TestB implements Module {

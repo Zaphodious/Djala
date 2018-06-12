@@ -3,7 +3,7 @@ package com.blakwurm.djala;
 import com.blakwurm.ModularEntity;
 
 class GameEntity {
-    public static function initCharacter() : ModularEntity {
+    public static function initCharacter() : ModularEntity<GameEntityModule> {
         var character = new ModularEntity({name: "Unnamed"});
         character
                 .set(HealthTrack, new HealthTrack())
@@ -11,13 +11,15 @@ class GameEntity {
         return character;
     }
 
-    public static function initRulebook() : ModularEntity {
+    public static function initRulebook() : ModularEntity<GameEntityModule> {
         var rulebook = new ModularEntity({name: "Unnamed"});
         return rulebook;
     }
 }
 
-private class HealthTrack implements Module {
+interface GameEntityModule extends Module {}
+
+class HealthTrack implements GameEntityModule {
     public var zero: Int = 1;
     public var one: Int = 2;
     public var two: Int = 3;
@@ -27,33 +29,33 @@ private class HealthTrack implements Module {
     public var aggrevated: Int = 0;
 }
 
-public class CharacterModule implements Module {
+class CharacterModule implements GameEntityModule {
     public var player: String = "Zaphodious";
     public var type: String = "Solar";
     public var rulebooks: Array<String> = ["core"];
     public var image: String = "";
 }
 
-public class SolarModule implements Module {
+class SolarModule implements GameEntityModule {
     public var caste: String;
     public var supernal: String;
     public var favored: Array<String>;
 }
 
-public class StatModule implements Module {
+class StatModule implements GameEntityModule {
     public var attributes: Map<String, Int> = new Map<String, Int>();
     public var abilities: Map<String, Int> = new Map<String, Int>();
 }
 
-public class CasterModule implements Module {
+class CasterModule implements GameEntityModule {
     public var castables: Array<CastableRef> = [];
 }
 
-public class MeritModule implements Module {
+class MeritModule implements GameEntityModule {
     public var merits: Array<MeritRef> = [];
 }
 
-private class ARuleRef {
+class ARuleRef {
     public var name: String;
     public var rulebook: String = "core";
 }
