@@ -3,6 +3,7 @@ package com.blakwurm.djala;
 import com.blakwurm.ModularEntity;
 import HaxeLow;
 import com.blakwurm.djala.GameEntity;
+using haxe.Json;
 
 
 interface Registry {
@@ -35,6 +36,20 @@ class LocalRegistry extends AbstractRegistry {
         super.insert(thing);
         db.save();
         return true;
+    }
+}
+
+class FileRegistry extends AbstractRegistry {
+    var filename: String;
+
+    public function new(dbname: String) {
+        filename = dbname + ".djala";
+    }
+
+    override public function insert(thing: ModularEntity<GameEntityModule>) : Bool {
+        var result = super.insert(thing);
+        sys.io.File.saveContent(filename, entities.stringify());
+        return result;
     }
 }
 
