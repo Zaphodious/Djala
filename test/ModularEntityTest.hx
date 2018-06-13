@@ -84,7 +84,7 @@ class ModularEntityTest
 		Assert.isNull(testEntity.get(TestA));
 	}
 
-	/* @Test
+/* 	@Test
 	public function copies() {
 		var testA1 = new TestA({name: "thingA"});
 
@@ -96,15 +96,15 @@ class ModularEntityTest
 
 		trace("New Test Entity is " + anotherTestEntity);
 		Assert.areNotEqual(testEntity, anotherTestEntity);
-	} */
+	}  */
 
 	@Test
 	public function roundTripsWithJson() {
-		var newJson = testEntity.toJson().stringify();
+		var newJson = testEntity.toJsonString();
 
 		trace(newJson);
 
-		var newEntity = ModularEntity.fromJson(newJson.parse());
+		var newEntity = ModularEntity.fromJsonString(newJson);
 
 		Assert.areNotEqual(testEntity, newEntity);
 	}

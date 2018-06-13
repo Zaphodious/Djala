@@ -5,6 +5,8 @@ import HaxeLow;
 
 using Type;
 using dataclass.JsonConverter;
+using haxe.Json;
+using com.blakwurm.DataClassExt;
 
 class ModularEntity<M: Module> implements DataClass {
 
@@ -42,9 +44,8 @@ class ModularEntity<M: Module> implements DataClass {
     }
 
     public function toString() : String {
-        return cast( this.toJson() );
+        return this.toJsonString();
     }
-
     
 }
 
