@@ -10,11 +10,15 @@
 
 -lib monsoon-embed
 -lib haxeui-openfl
+-lib lime
 -lib openfl
--x bin/prod/djala.n
+#-x bin/prod/djala.n
+-cmd haxelib run openfl build neko
 --next
 -lib monsoon-embed
--lib haxeui-hxwidgets
+-lib haxeui-openfl
+-lib lime
+-lib openfl
 -cpp bin/prod/cpp
 --next
 

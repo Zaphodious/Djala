@@ -1,0 +1,212 @@
+{
+     "com.blakwurm.ModularEntity" : [
+         {
+             "_hxcls" : "com.blakwurm.ModularEntity"
+            ,"name" : "Unnamed"
+            ,"__modules" : {
+                 "com.blakwurm.djala.HealthTrack" : {
+                     "_hxcls" : "com.blakwurm.djala.HealthTrack"
+                    ,"four" : 2
+                    ,"zero" : 1
+                    ,"aggrevated" : 0
+                    ,"one" : 2
+                    ,"two" : 3
+                    ,"lethal" : 0
+                    ,"bashing" : 0
+                }
+                ,"com.blakwurm.djala.CharacterModule" : {
+                     "_hxcls" : "com.blakwurm.djala.CharacterModule"
+                    ,"type" : "Solar"
+                    ,"rulebooks" : [
+                         "core"
+                    ]
+                    ,"player" : "Zaphodious"
+                    ,"image" : ""
+                }
+            }
+            ,"id" : "80000000-bb08-46c6-a804-94167b305d95"
+        }
+        ,{
+             "_hxcls" : "com.blakwurm.ModularEntity"
+            ,"name" : "Unnamed"
+            ,"__modules" : {
+                 "com.blakwurm.djala.HealthTrack" : {
+                     "_hxcls" : "com.blakwurm.djala.HealthTrack"
+                    ,"four" : 2
+                    ,"zero" : 1
+                    ,"aggrevated" : 0
+                    ,"one" : 2
+                    ,"two" : 3
+                    ,"lethal" : 0
+                    ,"bashing" : 0
+                }
+                ,"com.blakwurm.djala.CharacterModule" : {
+                     "_hxcls" : "com.blakwurm.djala.CharacterModule"
+                    ,"type" : "Solar"
+                    ,"rulebooks" : [
+                         "core"
+                    ]
+                    ,"player" : "Zaphodious"
+                    ,"image" : ""
+                }
+            }
+            ,"id" : "80000000-4dd9-4b26-8392-75fd42ec8a2a"
+        }
+        ,{
+             "_hxcls" : "com.blakwurm.ModularEntity"
+            ,"name" : "Unnamed"
+            ,"__modules" : {
+                 "com.blakwurm.djala.HealthTrack" : {
+                     "_hxcls" : "com.blakwurm.djala.HealthTrack"
+                    ,"four" : 2
+                    ,"zero" : 1
+                    ,"aggrevated" : 0
+                    ,"one" : 2
+                    ,"two" : 3
+                    ,"lethal" : 0
+                    ,"bashing" : 0
+                }
+                ,"com.blakwurm.djala.CharacterModule" : {
+                     "_hxcls" : "com.blakwurm.djala.CharacterModule"
+                    ,"type" : "Solar"
+                    ,"rulebooks" : [
+                         "core"
+                    ]
+                    ,"player" : "Zaphodious"
+                    ,"image" : ""
+                }
+            }
+            ,"id" : "80000000-fff7-49d7-a2c8-58d10ca3651d"
+        }
+        ,{
+             "_hxcls" : "com.blakwurm.ModularEntity"
+            ,"name" : "Unnamed"
+            ,"__modules" : {
+                 "com.blakwurm.djala.HealthTrack" : {
+                     "_hxcls" : "com.blakwurm.djala.HealthTrack"
+                    ,"four" : 2
+                    ,"zero" : 1
+                    ,"aggrevated" : 0
+                    ,"one" : 2
+                    ,"two" : 3
+                    ,"lethal" : 0
+                    ,"bashing" : 0
+                }
+                ,"com.blakwurm.djala.CharacterModule" : {
+                     "_hxcls" : "com.blakwurm.djala.CharacterModule"
+                    ,"type" : "Solar"
+                    ,"rulebooks" : [
+                         "core"
+                    ]
+                    ,"player" : "Zaphodious"
+                    ,"image" : ""
+                }
+            }
+            ,"id" : "80000000-cff1-43a0-bfe3-644653f3747f"
+        }
+        ,{
+             "_hxcls" : "com.blakwurm.ModularEntity"
+            ,"name" : "Unnamed"
+            ,"__modules" : {
+                 "com.blakwurm.djala.HealthTrack" : {
+                     "_hxcls" : "com.blakwurm.djala.HealthTrack"
+                    ,"four" : 2
+                    ,"zero" : 1
+                    ,"aggrevated" : 0
+                    ,"one" : 2
+                    ,"two" : 3
+                    ,"lethal" : 0
+                    ,"bashing" : 0
+                }
+                ,"com.blakwurm.djala.CharacterModule" : {
+                     "_hxcls" : "com.blakwurm.djala.CharacterModule"
+                    ,"type" : "Solar"
+                    ,"rulebooks" : [
+                         "core"
+                    ]
+                    ,"player" : "Zaphodious"
+                    ,"image" : ""
+                }
+            }
+            ,"id" : "80000000-9ea2-4cf5-b3fb-6be67bac9ea6"
+        }
+        ,{
+             "_hxcls" : "com.blakwurm.ModularEntity"
+            ,"name" : "Unnamed"
+            ,"__modules" : {
+                 "com.blakwurm.djala.HealthTrack" : {
+                     "_hxcls" : "com.blakwurm.djala.HealthTrack"
+                    ,"four" : 2
+                    ,"zero" : 1
+                    ,"aggrevated" : 0
+                    ,"one" : 2
+                    ,"two" : 3
+                    ,"lethal" : 0
+                    ,"bashing" : 0
+                }
+                ,"com.blakwurm.djala.CharacterModule" : {
+                     "_hxcls" : "com.blakwurm.djala.CharacterModule"
+                    ,"type" : "Solar"
+                    ,"rulebooks" : [
+                         "core"
+                    ]
+                    ,"player" : "Zaphodious"
+                    ,"image" : ""
+                }
+            }
+            ,"id" : "80000000-7bc4-46f2-850f-a87506a1516e"
+        }
+        ,{
+             "_hxcls" : "com.blakwurm.ModularEntity"
+            ,"name" : "Unnamed"
+            ,"__modules" : {
+                 "com.blakwurm.djala.CharacterModule" : {
+                     "_hxcls" : "com.blakwurm.djala.CharacterModule"
+                    ,"type" : "Solar"
+                    ,"rulebooks" : [
+                         "core"
+                    ]
+                    ,"player" : "Zaphodious"
+                    ,"image" : ""
+                }
+                ,"com.blakwurm.djala.HealthTrack" : {
+                     "_hxcls" : "com.blakwurm.djala.HealthTrack"
+                    ,"four" : 2
+                    ,"zero" : 1
+                    ,"aggrevated" : 0
+                    ,"one" : 2
+                    ,"two" : 3
+                    ,"lethal" : 0
+                    ,"bashing" : 0
+                }
+            }
+            ,"id" : "80000000-fed5-4b5f-8815-850fe2e8dd95"
+        }
+        ,{
+             "_hxcls" : "com.blakwurm.ModularEntity"
+            ,"name" : "Unnamed"
+            ,"__modules" : {
+                 "com.blakwurm.djala.CharacterModule" : {
+                     "_hxcls" : "com.blakwurm.djala.CharacterModule"
+                    ,"type" : "Solar"
+                    ,"rulebooks" : [
+                         "core"
+                    ]
+                    ,"player" : "Zaphodious"
+                    ,"image" : ""
+                }
+                ,"com.blakwurm.djala.HealthTrack" : {
+                     "_hxcls" : "com.blakwurm.djala.HealthTrack"
+                    ,"four" : 2
+                    ,"zero" : 1
+                    ,"aggrevated" : 0
+                    ,"one" : 2
+                    ,"two" : 3
+                    ,"lethal" : 0
+                    ,"bashing" : 0
+                }
+            }
+            ,"id" : "80000000-4898-4a33-820a-578a6060422a"
+        }
+    ]
+}

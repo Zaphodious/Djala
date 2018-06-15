@@ -9,7 +9,7 @@ using Monsoon;
 
 class System {
     public var modules: ModularEntity<SystemModule> = new ModularEntity({name: "System"});
-    public var systemArgs: SystemArgs = new SystemArgs();
+    public var systemArgs: SystemArgs = new SystemArgs(function (a: System) {});
     public function new() {}
 
     public function populateWithDefaults() : System {
@@ -20,6 +20,11 @@ class System {
 
     public function AddArgs(args: SystemArgs) : System {
         this.systemArgs = args;
+        return this;
+    }
+
+    public function runSetupFunction(setup: (System) -> Void) : System {
+        setup(this);
         return this;
     }
 
@@ -35,16 +40,19 @@ class System {
 }
 
 class SystemArgs {
-    public function new() {}
+    public function new(setup: (System) -> Void) {
+        systemSetup = setup;
+    }
     public var client: Bool = true;
     public var server: Bool = true;
     public var gui: Bool = true;
     public var dbname: String = "data";
+    private var systemSetup: (System) -> Void;
 
     @:defaultCommand
     public function run() {
         trace("Setting up the system!");
-        new System().AddArgs(this).populateWithDefaults().init();
+        new System().AddArgs(this).runSetupFunction(systemSetup).init();
         trace("System is done setting up!");
 
     }
