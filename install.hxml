@@ -2,3 +2,7 @@
 --next
 -cmd haxelib install test.hxml --always 
 --next
+-cmd haxelib install autocomplete.hxml --always
+--next
+-cmd sudo haxelib run nme setup
+--next

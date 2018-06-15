@@ -1,11 +1,12 @@
 -cp src
--main com.blakwurm.Anathema
 -lib monsoon-embed
 -lib dataclass
 -lib haxelow
--lib tink_cli
+#-lib tink_cli
 -lib haxe-strings
 -lib haxeui-core
+#-lib nme
+-lib haxeui-nme
 --each
 
 -lib monsoon-embed
@@ -13,21 +14,27 @@
 -lib lime
 -lib openfl
 #-x bin/prod/djala.n
--cmd haxelib run openfl build neko
---next
--lib monsoon-embed
--lib haxeui-openfl
--lib lime
--lib openfl
--cpp bin/prod/cpp
+-main com.blakwurm.anathema.AnathemaUI
+-cmd run openfl test application.xml neko -debug
+#-cmd haxelib run openfl build neko
+#-lib nme
+#-lib haxeui-nme
+#-cmd nme neko bin/prod/djala.n
+#--next
+#-lib monsoon-embed
+#-lib haxeui-openfl
+#-lib lime
+#-lib openfl
+#-cpp bin/prod/cpp
+#-cmd nme cpp bin/prod/nme/cpp
 --next
 
 -cp src
--main com.blakwurm.djala.Main
+-main com.blakwurm.anathema.AnathemaUI
 -lib monsoon
 -lib dataclass
 -lib haxelow
--lib tink_cli
+#-lib tink_cli
 -lib haxe-strings
 --each
 

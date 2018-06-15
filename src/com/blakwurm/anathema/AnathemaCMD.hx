@@ -1,14 +1,12 @@
-package com.blakwurm;
+package com.blakwurm.anathema;
 
 import tink.Cli;
 import com.blakwurm.djala.System;
-import com.blakwurm.djala.Ui;
 
-class Anathema {
+class AnathemaCMD {
     public static function main() {
         trace("Starting thing!");
         Cli.process(Sys.args(), new SystemArgs(function (sys: System) {
-            sys.modules.set(Ui, new Ui({}));
         }));
         trace("Done Starting Thing!");
     }

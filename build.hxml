@@ -1,0 +1,17 @@
+-cmd haxelib run openfl build application.xml neko
+
+--next
+
+-cp src
+-main com.blakwurm.anathema.AnathemaUI
+-lib dataclass
+-lib haxelow
+#-lib tink_cli
+-lib haxe-strings
+-lib haxeui-core
+-lib haxeui-html5
+-lib hscript
+--each
+
+-js bin/prod/djala.js
+--next
