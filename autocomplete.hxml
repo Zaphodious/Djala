@@ -1,0 +1,18 @@
+-lib monsoon-embed
+-lib dataclass
+-lib haxelow
+-lib tink_cli
+-lib haxe-strings
+-lib haxeui-core
+
+-lib openfl
+-lib haxeui-openfl
+-lib kha
+
+-lib haxeui-hxwidgets
+
+-lib munit
+-lib mockatoo
+
+-cp src
+-cp test

@@ -5,12 +5,16 @@
 -lib haxelow
 -lib tink_cli
 -lib haxe-strings
+-lib haxeui-core
 --each
 
 -lib monsoon-embed
--neko bin/prod/djala.n
+-lib haxeui-openfl
+-lib openfl
+-x bin/prod/djala.n
 --next
 -lib monsoon-embed
+-lib haxeui-hxwidgets
 -cpp bin/prod/cpp
 --next
 
