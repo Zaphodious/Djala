@@ -21,6 +21,7 @@
     <haxelib name="tink_cli" />
 
     <assets path="resources/css/" rename="css" />
+    <assets path="resources/fonts/" rename="fonts" />
     <assets path="resources/img/" rename="img" />
     <assets path="resources/ui/" rename="ui" />
 </project>

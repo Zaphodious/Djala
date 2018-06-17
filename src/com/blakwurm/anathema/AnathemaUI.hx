@@ -11,6 +11,7 @@ class AnathemaUI {
             sys.modules.set(Ui, new Ui({}));
             sys.modules.set(RegistrySystemModule, new RegistrySystemModule({}));
         });
+        //args.mobile = true;
         args.run();
         trace("Done Starting Thing!");
     }

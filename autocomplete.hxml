@@ -9,7 +9,7 @@
 -lib haxeui-openfl
 -lib kha
 
--lib haxeui-hxwidgets
+-lib haxeui-html5
 
 -lib munit
 -lib mockatoo

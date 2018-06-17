@@ -1,4 +1,4 @@
- -cmd haxelib run openfl build application.xml neko -Dnext
+# -cmd haxelib run openfl build application.xml neko -Dnext
 # -cmd haxelib run openfl build application.xml cpp -Dnext
 
 # --next
@@ -15,7 +15,7 @@
 -lib hscript
 --each
 
--js bin/prod/js/anathema.js
+-js resources/anathema.js
 --next
 
 # -cp src

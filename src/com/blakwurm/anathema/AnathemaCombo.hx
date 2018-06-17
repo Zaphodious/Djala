@@ -9,11 +9,12 @@ import com.blakwurm.djala.Ui;
 class AnathemaCombo {
     public static function main() {
         trace("Starting thing!");
-        Cli.process(Sys.args(), new SystemArgs(function (sys: System) {
+        var sysargs = new SystemArgs(function (sys: System) {
             sys.modules.set(Ui, new Ui({}));
             sys.modules.set(ServerSystemModule, new ServerSystemModule({}));
             sys.modules.set(RegistrySystemModule, new RegistrySystemModule({}));
-        }));
+        });
+        Cli.process(Sys.args(), sysargs);
         trace("Done Starting Thing!");
     }
 }

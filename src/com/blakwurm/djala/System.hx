@@ -36,6 +36,7 @@ class SystemArgs {
     public var client: Bool = true;
     public var server: Bool = false;
     public var headless: Bool = false;
+    public var mobile: Bool = false;
     public var dbname: String = "data";
     private var systemSetup: (System) -> Void;
 

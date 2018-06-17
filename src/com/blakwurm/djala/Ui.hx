@@ -21,7 +21,12 @@ class Ui implements SystemModule {
     }
     public function init(system: System): Bool {
         if (!system.systemArgs.headless) {
-            var main:Component = ComponentMacros.buildComponent("resources/ui/shell.xml");
+            var main:Component;
+            if (system.systemArgs.mobile) {
+                main = ComponentMacros.buildComponent("resources/ui/shell-mobile.xml");
+            } else {
+                main = ComponentMacros.buildComponent("resources/ui/shell-desktop.xml");
+            }
             app.addComponent(main);
         }
         return true;
