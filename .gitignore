@@ -59,6 +59,7 @@ typings/
 
 # build results
 bin
+build
 report
 .idea
 *.iml

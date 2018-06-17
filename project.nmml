@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
     <meta title="Anathema" package="com.blakwurm.Anathema" version="1.0.0" company="Blakwurm" />
-    <app main="com.blakwurm.anathema.AnathemaCombo" file="anathema" path="bin/openfl/" />
+    <app  main="com.blakwurm.anathema.AnathemaUI" file="anathema" path="bin/nme/" />
 
     <window background="#FFFFFF" fps="60" />
-    <window width="800" height="600" if="desktop" />
-    <window width="0" height="0" if="html5" />
+    <window width="800" height="600" unless="mobile" />
 
     <!-- classpath, haxe libs -->
     <source path="src" />
 
-    <haxelib name="openfl" />
+    <haxelib name="nme" />
     <haxelib name="actuate" />
-
+    <haxelib name="hscript" />
     <haxelib name="haxeui-core" />
     <haxelib name="haxeui-openfl" />
     <haxelib name="monsoon-embed" />
     <haxelib name="dataclass" />
+    <haxelib name="haxelow" />
     <haxelib name="haxe-strings" />
-    <haxelib name="tink_cli" />
 
-    <assets path="resources/css/" rename="css" />
-    <assets path="resources/img/" rename="img" />
-    <assets path="resources/ui/" rename="ui" />
+    <haxelib name="haxeui-core" />
+    <haxelib name="haxeui-nme" />
 </project>

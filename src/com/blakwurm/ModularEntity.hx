@@ -1,7 +1,6 @@
 package com.blakwurm;
 
 import DataClass;
-import HaxeLow;
 
 using Type;
 using dataclass.JsonConverter;
@@ -18,7 +17,7 @@ class ModularEntity<M: Module> implements DataClass {
     /**
      *  Unique string, used to identify the entity.
      */
-    public var id: String = HaxeLow.uuid();
+    public var id: String = "" + Std.random(999999);
 
     /**
      *  Exposed publically for the benefit of serialiation. This SHOULD NOT be accessed on its own, as type safety is not guarantted.

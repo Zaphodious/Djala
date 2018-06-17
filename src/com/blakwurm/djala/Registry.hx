@@ -1,8 +1,8 @@
 package com.blakwurm.djala;
 
 import com.blakwurm.ModularEntity;
-import HaxeLow;
 import com.blakwurm.djala.GameEntity;
+import com.blakwurm.djala.System;
 using haxe.Json;
 
 
@@ -23,36 +23,27 @@ class AbstractRegistry implements Registry {
     public function delete(id: String) : Bool {return true;}
 }
 
-class LocalRegistry extends AbstractRegistry {
-    var db: HaxeLow;
-    var lowEntities: Array<ModularEntity<GameEntityModule>> = new Array();
 
-    public function new(dbname: String) {
-        db = new HaxeLow(dbname);
-        lowEntities = db.idCol(ModularEntity);
-        this.entities = lowEntities;
-    }
-    override public function insert(thing: ModularEntity<GameEntityModule>) : Bool {
-        super.insert(thing);
-        db.save();
-        return true;
-    }
-}
-
-class FileRegistry extends AbstractRegistry {
-    var filename: String;
-
-    public function new(dbname: String) {
-        filename = dbname + ".djala";
-    }
-
-    override public function insert(thing: ModularEntity<GameEntityModule>) : Bool {
-        var result = super.insert(thing);
-        sys.io.File.saveContent(filename, entities.stringify());
-        return result;
-    }
-}
 
 class DummyRegistry extends AbstractRegistry {
     public function new(n:String){}
 }
+
+
+class RegistrySystemModule implements SystemModule {
+    @exclude public var store: Registry = new DummyRegistry("Dummy");
+
+    @exclude public function preInit(system: System): Bool {
+/*         trace("Making data store");
+        this.store = new LocalRegistry(system.systemArgs.dbname);
+        this.store.insert(GameEntity.initCharacter());
+        this.store.insert(GameEntity.initCharacter());
+        trace("Data store made");*/
+        return true; 
+    }
+    @exclude public function init(system: System): Bool {return true;}
+    @exclude public function postInit(system: System): Bool {return true;}
+}
+
+
+

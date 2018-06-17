@@ -1,25 +1,31 @@
--cmd haxelib run openfl test application.xml neko 
+ -cmd haxelib run openfl build application.xml neko -Dnext
+# -cmd haxelib run openfl build application.xml cpp -Dnext
 
 # --next
 
+-cp src
+-main com.blakwurm.anathema.AnathemaUI
+-lib dataclass
+# -lib haxelow
+# -lib tink_cli
+# -lib haxe-strings
+# -lib monsoon-embed 
+-lib haxeui-core
+-lib haxeui-html5
+-lib hscript
+--each
+
+-js bin/prod/js/anathema.js
+--next
+
 # -cp src
 # -main com.blakwurm.anathema.AnathemaUI
+
 # -lib dataclass
 # -lib haxelow
 # -lib tink_cli
 # -lib haxe-strings
 # -lib monsoon-embed 
-# -lib haxeui-core
-# -lib haxeui-html5
-# -lib hscript
-# --each
-
-# -js bin/prod/djala.js
-# --next
-
-# -cp src
-# -main com.blakwurm.anathema.AnathemaUI
-
 # -lib haxeui-core
 # -lib haxeui-hxwidgets
 # -lib hxWidgets

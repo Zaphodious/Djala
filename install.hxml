@@ -1,8 +1,8 @@
--cmd haxelib install build-all.hxml --always 
+-cmd haxelib install build.hxml --always 
 --next
 -cmd haxelib install test.hxml --always 
 --next
 -cmd haxelib install autocomplete.hxml --always
 --next
--cmd sudo haxelib run nme setup
+-cmd haxelib run nme setup
 --next
